@@ -27,7 +27,7 @@ pub struct CharaChordHistory {
 }
 
 /// Parse Coords into HashMap
-pub async fn parse_coords(file: &str) -> HashMap<String, String> {
+pub async fn parse_chords(file: &str) -> HashMap<String, String> {
     let mut result = HashMap::new();
     let config = parse_json_file(file).await;
     let chords = config.history[0][0].chords.as_ref().unwrap();
